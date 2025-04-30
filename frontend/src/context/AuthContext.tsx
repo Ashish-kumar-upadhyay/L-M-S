@@ -1,6 +1,6 @@
 import { createContext, useEffect, useReducer, ReactNode, Dispatch } from "react";
-import AuthReducer from "../context/AuthReducer";
-import { AuthState, AuthAction } from "../context/types";    
+import AuthReducer from "./AuthReducer";
+import { AuthState, AuthAction } from "./types";    
 
 interface AuthContextProviderProps {
   children: ReactNode;

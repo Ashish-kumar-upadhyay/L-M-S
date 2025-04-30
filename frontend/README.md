@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# Library Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Library Management System, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
+Visit the live application: [Library Management System](https://lib-mang-system.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Modern, responsive UI for the library management system
+- User authentication (login, signup, profile management)
+- Book browsing and searching functionality
+- Member dashboard for managing borrowed books
+- Admin interfaces for system management
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **React** - Frontend framework
+- **TypeScript** - Type safety
+- **React Router** - Navigation
+- **Tailwind CSS** - Styling
+- **Axios** - API requests
+- **Context API** - State management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Start the development server:
+```bash
+npm run dev
 ```
+
+3. Build for production:
+```bash
+npm run build
+```
+
+## Project Structure
+```
+src/
+├── assets/       # Static assets (images, icons)
+├── components/   # Reusable UI components
+├── context/      # Context API providers
+├── pages/        # Page components
+├── services/     # API service layers
+└── utils/        # Utility functions and helpers
+```
+
+## Environment Setup
+Create a `.env` file in the root directory with the following variables:
+```
+VITE_API_URL=https://l-m-s-1-bmg6.onrender.com/api
+```
+
+## Deployment
+The frontend is deployed on Netlify. Any pushes to the main branch will trigger a new deployment.
+
+## API Integration
+This frontend connects to a Node.js/Express backend API. See the main project README for details on the backend setup.

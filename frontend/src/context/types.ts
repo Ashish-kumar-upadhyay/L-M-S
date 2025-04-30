@@ -3,6 +3,10 @@ export interface User {
   id: string;
   username: string;
   email: string;
+  isAdmin?: boolean;
+  firstName?: string;
+  lastName?: string;
+  createdAt?: string;
   // Add other user properties as needed
 }
 

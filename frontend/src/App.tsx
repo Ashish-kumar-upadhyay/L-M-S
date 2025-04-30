@@ -5,49 +5,46 @@ import MemberDashboard from './pages/MemberDashboard';
 import Allbooks from './pages/Allbooks';
 import Header from './components/Header';
 import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
-import { AuthContextProvider } from './context/AuthContext';
 import Profile from './pages/Profile'; // You'll need to create this page later
 
 const App: React.FC = () => {
   return (
-    <AuthContextProvider>
-      <Router>
-        <Header />
-        <div className="App pt-16">
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/books" element={<Allbooks />} />
-            
-            {/* Protected Routes */}
-            <Route 
-              path="/dashboard@member" 
-              element={
-                <ProtectedRoute>
-                  <MemberDashboard />
-                </ProtectedRoute>
-              } 
-            />
-            
-            <Route 
-              path="/profile" 
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              } 
-            />
-            
-            {/* Catch all - 404 */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </Router>
-    </AuthContextProvider>
+    <Router>
+      <Header />
+      <div className="App pt-16">
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/books" element={<Allbooks />} />
+          
+          {/* Protected Routes */}
+          <Route 
+            path="/dashboard@member" 
+            element={
+              <ProtectedRoute>
+                <MemberDashboard />
+              </ProtectedRoute>
+            } 
+          />
+          
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Catch all - 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

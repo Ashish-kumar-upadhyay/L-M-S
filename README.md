@@ -1,121 +1,118 @@
-# Library Management System
+# Library Management System (LMS)
 
-A modern web application for managing library resources efficiently. This system facilitates book tracking, user management, and streamlines the borrowing process with an intuitive interface.
+## Live Demo
+Visit the live application: [Library Management System](https://lib-mang-system.netlify.app/)
 
-## 🚀 Features
+## Overview
+A modern, responsive library management system that allows users to browse books, create accounts, borrow books, and manage their reading activities. Administrators can manage the book inventory, track borrowed books, and analyze user data.
 
-- **User Authentication**
-  - Secure login and signup
-  - Role-based access (Member/Admin)
-  - Password reset functionality
+## Features
+- **User Authentication**: Secure signup, login and profile management
+- **Book Catalog**: Browse, search and view detailed information about books
+- **Book Management**: Borrow, return, and track reading history
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Admin Dashboard**: Special access for administrators to manage library resources
 
-- **Member Dashboard**
-  - Overview of borrowed and returned books
-  - Fine calculation for overdue items
-  - Transaction history with status indicators
+## Technologies Used
 
-- **Profile Management**
-  - Personal information editing
-  - Profile photo upload and storage
-  - Password management
+### Frontend
+- React.js with TypeScript
+- React Router for navigation
+- Tailwind CSS for styling
+- Axios for API requests
 
-- **Book Management**
-  - Comprehensive book catalog
-  - Search and filter functionality
-  - Book details with availability status
+### Backend
+- Node.js and Express.js
+- MongoDB for database
+- JWT for authentication
+- RESTful API architecture
 
-- **Borrowing System**
-  - Book reservation
-  - Due date tracking
-  - Return processing
+## Getting Started
 
-- **Admin Features**
-  - User management
-  - Book inventory control
-  - Reports and statistics
-
-## 🛠️ Technologies
-
-- **Frontend**
-  - React (with TypeScript)
-  - TailwindCSS for styling
-  - React Router for navigation
-  - Context API for state management
-
-- **Backend**
-  - Node.js with Express
-  - MongoDB for database
-  - JWT for authentication
-  - RESTful API architecture
-
-## 📋 Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB
+### Prerequisites
+- Node.js (v14+)
 - npm or yarn
+- MongoDB (local or Atlas)
 
-## 🚀 Installation and Setup
+### Installation and Setup
 
-### Clone the repository
+#### Frontend
 ```bash
-git clone https://github.com/yourusername/library-management-system.git
-cd library-management-system
+# Navigate to frontend directory
+cd L-M-S/frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-### Backend setup
+#### Backend
 ```bash
-cd backend
+# Navigate to backend directory
+cd L-M-S/backend
+
+# Install dependencies
 npm install
-# Create a .env file with your MongoDB URI and JWT secret
+
+# Set up environment variables
+# Create a .env file with the following:
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+# Start development server
+npm run dev
+
+# Start for production
 npm start
 ```
 
-### Frontend setup
-```bash
-cd frontend
-npm install
-npm start
+## API Documentation
+
+The API follows RESTful principles and includes endpoints for:
+
+- Authentication (login, register, profile)
+- Books (list, detail, search, borrow, return)
+- User management (profile update, password change)
+
+For detailed API documentation, see the API.md file.
+
+## Deployment
+
+### Frontend
+The frontend is deployed on Netlify: [https://lib-mang-system.netlify.app/](https://lib-mang-system.netlify.app/)
+
+### Backend
+The backend API is deployed on Render: [https://l-m-s-1-bmg6.onrender.com/api](https://l-m-s-1-bmg6.onrender.com/api)
+
+## Project Structure
+```
+L-M-S/
+├── frontend/             # React application
+│   ├── public/           # Public assets
+│   ├── src/              # Source files
+│   │   ├── assets/       # Static assets
+│   │   ├── components/   # React components
+│   │   ├── context/      # Context providers
+│   │   ├── pages/        # Page components
+│   │   ├── services/     # API services
+│   │   └── utils/        # Utility functions
+│   └── package.json      # Frontend dependencies
+└── backend/              # Express server
+    ├── controllers/      # Request handlers
+    ├── models/           # Database models
+    ├── routes/           # API routes
+    ├── middleware/       # Custom middleware
+    └── package.json      # Backend dependencies
 ```
 
-## 📱 Usage
+## Contributors
+- Ajit
 
-### Member Workflow
-1. Register or login to your account
-2. Browse available books in the catalog
-3. Reserve books of interest
-4. Visit the library to collect reserved books
-5. Return books before due date to avoid fines
-6. Check your borrowing history and status
-
-### Admin Workflow
-1. Login with admin credentials
-2. Manage book inventory (add, edit, delete)
-3. Process member requests (reservations, returns)
-4. Manage user accounts
-5. Generate and view reports
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📸 Screenshots
-
-![Dashboard](screenshots/dashboard.png)
-![Book Catalog](screenshots/catalog.png)
-![Profile Page](screenshots/profile.png)
-
-## 📧 Contact
-
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/yourusername/library-management-system](https://github.com/yourusername/library-management-system) 
